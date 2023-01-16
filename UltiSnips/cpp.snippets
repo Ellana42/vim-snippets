@@ -129,12 +129,12 @@ $1::$1() {}
 
 $1::$1(const $1 & src) 
 {
-	$2	
+	*this = src;
 }
 
 $1 & operator=(const $1 & rhs)
 {
-	*this = src;
+	$2	
 }
 
 $1::~$1() {}
