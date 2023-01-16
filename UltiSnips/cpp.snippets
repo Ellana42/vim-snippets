@@ -122,6 +122,24 @@ public:
 #endif /* $2 */
 endsnippet
 
+snippet fcla "Implementation of canonical class funcs" b
+#include "${1:`!v substitute(substitute(vim_snippets#Filename('$1','ClassName'),'^.','\u&',''), '_\(\w\)', '\u\1', 'g')`}.hpp"
+
+$1::$1() {}
+
+$1::$1(const $1 & src) 
+{
+	$2	
+}
+
+$1 & operator=(const $1 & rhs)
+{
+	*this = src;
+}
+
+$1::~$1() {}
+endsnippet
+
 
 snippet fnc "Basic c++ doxygen function template" b
 /**
