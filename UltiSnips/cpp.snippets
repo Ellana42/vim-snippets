@@ -114,6 +114,8 @@ private:
 
 public:
 	$1();
+	$1(const $1 & src);
+	$1 & operator=(const $1 & rhs);
 	virtual ~$1();
 };
 
