@@ -135,6 +135,7 @@ $1::$1(const $1 & src)
 $1 & $1::operator=(const $1 & rhs)
 {
 	$2	
+	return (*this);
 }
 
 $1::~$1() {}
